@@ -1,2 +1,261 @@
-﻿@charset "UTF-8";
+﻿/*
+↓これはclear:bothを書ける箱がない時用に
+疑似要素で箱作ってそれにclear:both書いてる
+*/
+
+.clearfix:after{
+content:".";
+display:block;
+height:0px;
+clear:both;
+visibility:hidden;
+
+}
+/*↑ここまで */
+
+/* breakpoint 960px(ＰＣサイズ) */
+.header:after{
+content:'ＰＣサイズ';
+display:block;
+text-align:center;
+font-size:2em;
+padding-top:30px;
+
+}
+
+body{
+background-color:#FFF8DC;
+margin:0;
+padding:0;
+font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+border-radius:10px;
+	
+}
+.container{
+/*width:960px; 消去しないこと*/
+width:90%;
+margin:0 auto;
+/*min-width:500px;
+max-width:1000px;一時的にコメントアウト、サイズ変更時邪魔になるかも*/
+
+}
+
+.header{
+height:100px;
+background-color:#FFD700;
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+border-radius:10px;
+
+}
+
+.main{
+background-color: #E5DEDE;	
+}
+
+.leftbox{
+/*width:240px;*/
+width:25%;
+height:560px;
+float:left;
+background-color:#C2F8F9;
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+border-radius:10px;
+background-color:#FFA500;
+}
+.nav{
+width:100%;
+
+background-color:#FFF8DC;
+}
+
+.rightbox{
+/*width:720px;*/
+width:75%;
+float:left;
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+border-radius:10px;
+
+}
+
+
+
+.footer{
+height:300px;
+background-color:#F0E68C;
+clear:both;
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+border-radius:10px;
+
+}
+
+.box{
+/*width:220px;*/
+/*width:30.55%;*/
+height:100px;
+background-color:#FFD700;
+margin:10px 10px 0 10px;
+/*margin:10px 1.38% 0 1.38%;*/
+
+/*左右のマージンは絶対値で10pxの場合*/
+width:calc(240 / 720 * 100% - 20px); 
+float:left;
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+border-radius:10px;
+
+}
+
+/*
+ここからナビゲーションのスタイル
+
+*/
+.nav ul{
+margin:0;
+padding:0;
+list-style-type:none;
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+border-radius:10px;
+
+}
+
+.nav li a{
+text-decoration:none;
+display:block;
+float:left;
+box-sizing:border-box;
+/*width:159px;*/
+/*width:16.66%;*/
+width:calc(159 / 960 * 100% - 1px); 
+text-align:center;
+line-height:40px;
+border-right:1px solid #000;
+-webkit-box-shadow: inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+-moz-box-shadow:    inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+box-shadow:         inset 2px 6px 12px 0px rgba(21, 23, 25, 0.75);
+border-radius:10px;
+background-color:#FFF8DC;
+}
+
+/*
+.nav li:nth-child(3) a{
+border-right:none;
+}
+
+.nav li:nth-child(-n+7) a{
+border-bottom:1px solid #000;
+}*/
+
+
+.nav li:last-child a{
+border:none;
+}
+
+.nav li a:hover{
+background-color:#F75454;
+color:#fff;
+
+}
+
+
+
+/*
+ここまでナビゲーションのスタイル
+
+*/
+
+
+
+
+/* breakpoint700px(タブレットサイズ) */
+@media screen and (max-width:700px){
+	.container {
+		width:100%;
+	}
+
+	.leftbox{
+		float:none;
+		width:100%;
+		height:200px;
+	}
+	.rightbox{
+		float:none;
+		width:100%;
+	}
+
+	.rightbox .box {
+		width:48%;
+		margin:10px 1% 0 1%;
+	}
+
+	.nav li a {
+		width:calc(100% / 3);
+	}
+
+	.nav li:nth-child(3) a {
+		border-right:none;
+
+	}
+
+	.nav li:nth-child(-n+3) a {
+		border-bottom:1px solid #000;
+	}
+
+	.header:after{
+	content:'タブレットサイズ';
+	display:block;
+	text-align:center;
+	font-size:2em;
+	padding-top:30px;
+	}
+
+}
+
+/* breakpoint400px(スマホサイズ) */
+
+@media screen and (max-width:400px){
+	.nav li a {
+	float:none;
+	width:100%;
+	border-right:none;
+	border-bottom:1px solid #000;
+	padding:10px 0;
+	}
+	.header:after{
+	content:'スマホサイズ';
+	display:block;
+	text-align:center;
+	font-size:2em;
+	padding-top:30px;
+	}
+
+	.rightbox .box {
+	width:98%;
+	margin:10px 1% 0 1%;
+	height:200px;
+	}
+	
+	.nav li:not(:last-chaild) a {
+	border-bottom:1px solid #000;
+	}
+	
+	.box {
+	float:none;
+	width:100%;
+	height:500px;
+	}
+}
 
