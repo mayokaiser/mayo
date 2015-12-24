@@ -1,4 +1,4 @@
-﻿/*
+/*
 ↓これはclear:bothを書ける箱がない時用に
 疑似要素で箱作ってそれにclear:both書いてる
 */
@@ -24,7 +24,7 @@ padding-top:30px;
 }
 
 body{
-background-color:#FFF8DC;
+background-color:#000;
 margin:0;
 padding:0;
 font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
